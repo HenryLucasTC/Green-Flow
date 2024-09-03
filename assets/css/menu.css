@@ -1,0 +1,247 @@
+:root {
+    --primary-color: #FFA000;
+    --white-color: #2b1010cb;
+    --light-gray-color: #e7e5e5;
+    --secondary-color: crimson;
+    --gap: 3rem;
+}
+
+.white-bg {
+    color: var(--primary-color);
+}
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.section {
+    min-height: 100vh;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    font-family: inherit;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    margin: 5px;
+    color: var(--light-gray-color);
+    margin-right: 20px;
+}
+
+.navbar-menu a:hover {
+    border-bottom: 2px solid aliceblue;
+    transition: all 300ms step-start;
+}
+
+.navbar-menu-i a:hover {
+    border-bottom: 2px solid #084a7c;
+    transition: all 300ms step-start;
+}
+
+nav h1 {
+    font-size: 20px;
+    font-family: 'Poppins';
+}
+
+.menu-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-icons {
+    color: #084a7c;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-left: 15px;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    color: rgb(255, 255, 255);
+    font-family: "Poppins";
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .08);
+    padding: 0 100px 0 100px;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar {
+        justify-content: space-between;
+        padding: 0 0 0 16px;
+    }
+}
+
+.navbar-overlay {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(240, 226, 226, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+body.open .navbar-overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-overlay {
+        display: none;
+    }
+}
+
+.navbar-burger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-burger {
+        display: none;
+    }
+}
+
+.navbar-title {
+    margin: 0;
+    font-size: 16px;
+}
+
+.navbar-menu {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    translate: -100% 0;
+    width: 40%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    color: var(--light-gray-color);
+    background-color: #084a7c;
+    visibility: hidden;
+    transition: translate 0.3s;
+    margin-right: 15px;
+}
+
+.navbar-menu-i {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    translate: -100% 0;
+    width: 40%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--light-gray-color);
+    color: #084a7c;
+    visibility: hidden;
+    transition: translate 0.3s;
+    margin-right: 15px;
+}
+
+.navbar-menu-i a {
+    text-decoration: none;
+    margin: 5px;
+    color: #084a7c;
+}
+
+body.open .navbar-menu {
+    translate: 0 0;
+    visibility: visible;
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar-menu {
+        position: static;
+        translate: 0 0;
+        width: auto;
+        background: transparent;
+        flex-direction: row;
+        visibility: visible;
+    }
+
+    .navbar-menu-i {
+        position: static;
+        translate: 0 0;
+        width: auto;
+        background: transparent;
+        flex-direction: row;
+        visibility: visible;
+    }
+}
+
+/* BUSCAR */
+
+#divBusca {
+    /* margin-top: 8px; */
+    background-color: #ffffff;
+    border: solid 2px #4e693e;
+    border-radius: 5px;
+    width: 400px;
+    height: 38px;
+}
+
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 18px;
+    border: none;
+    height: 36px;
+    width: 295px;
+}
+
+#btnBusca {
+    position: relative;
+    border: none;
+    float: left;
+    height: 36px;
+    /* border-radius: 0 7px 7px 0; */
+    width: 70px;
+    font-weight: bold;
+    background: #27440b;
+    left: 3px;
+}
+
+#divBusca img {
+    float: left;
+}
+
+/* -------------------------- */
